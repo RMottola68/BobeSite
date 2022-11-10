@@ -1,18 +1,29 @@
 import './App.css';
 import {
-  BrowserRouter,
   Routes,
   Route,
   Navigate,
 } from 'react-router-dom';
+import Navigation from "./Navigation"
+import BobeBackground from "./assets/BobeBackground.png"
+import Landing from "./Landing";
 
 function App() {
+
+  const sectionStyle = {
+    backgroundImage: `url(${BobeBackground})`,
+    height: "100vh",
+    width: "100vw",
+    backgroundAttachment: "fixed"
+  }
+
   return (
-    <div className="App">
+    <div className="App overflow-auto" style={sectionStyle}>
+        <Navigation />
         <Routes >
           
-          {/* <Route path="*" element={<Navigate to="/home" replace/>} />
-          <Route path="home" element={<Landing />} /> */}
+          <Route path="*" element={<Navigate to="/" replace/>} />
+          <Route path="/" element={<Landing />} />
         </Routes>
     </div>
   );

@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+sudo service postgresql start
+npm start --prefix client
+rails s

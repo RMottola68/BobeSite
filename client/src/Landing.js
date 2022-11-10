@@ -1,4 +1,3 @@
-import { useState, useEffect} from 'react';
 import { Row, Container, Col, Ratio } from 'react-bootstrap';
 import {TwitterTimelineEmbed} from 'react-twitter-embed';
 import examplepanel from "./assets/examplepanel.png";
@@ -8,14 +7,15 @@ import examplepanel from "./assets/examplepanel.png";
 function Landing() {
 
     return (      
-        <Container fluid style={{ width:"100vw", height: "100vh", paddingTop: "150px"}}>
-                <Row className="justify-content-center">
+        <Container fluid style={{ width:"100vw", height: "100vh", paddingTop: "0px"}}>
+                <Row className="justify-content-center mb-3">
                 
                     <Col xs={12} lg={6} >
                         <Ratio aspectRatio={"16x9"} >
                             <iframe               
                                                
                                 // style={{minHeight:"300px", maxHeight: "500px", width:"100%", height:"100%", minWidth:"400", maxWidth:"888px"}}
+                                title="twitch-player-embed"
                                 src="https://player.twitch.tv/?channel=bobe_&parent=localhost" 
                                 allowfullscreen="true" 
                                 scrolling="no" 
@@ -29,6 +29,7 @@ function Landing() {
                         <Ratio aspectRatio={1/2} className="">
                         <iframe 
                             id="chat-embed" 
+                            title="embedded-chat"
                             style={{ borderRadius: "5px"}}
                             src="https://www.twitch.tv/embed/bobe_/chat?parent=localhost"
                             height="100%"
@@ -41,20 +42,20 @@ function Landing() {
                     
                 </Row>
                 <Row className="justify-content-center">
-                    <Col xs={12} lg={6} >
-                        <img src={examplepanel} style={{height:"auto", maxWidth:"50%"}} />
+                    <Col xs={12} lg={4} >
+                        <img src={examplepanel} style={{height:"auto", maxWidth:"100%"}} alt="twitch about panel" />
                         <br></br>
-                        <img src={examplepanel} style={{height:"auto", maxWidth:"50%"}} />
+                        <img src={examplepanel} style={{height:"auto", maxWidth:"100%"}} alt="twitch about panel" />
                         <br></br>
-                        <img src={examplepanel} style={{height:"auto", maxWidth:"50%"}} />
+                        <img src={examplepanel} style={{height:"auto", maxWidth:"100%"}} alt="twitch about panel" />
                         <br></br>
-                        <img src={examplepanel} style={{height:"auto", maxWidth:"50%"}} />
+                        <img src={examplepanel} style={{height:"auto", maxWidth:"100%"}} alt="twitch about panel" />
                         <br></br>
-                        <img src={examplepanel} style={{height:"auto", maxWidth:"50%"}} />
+                        <img src={examplepanel} style={{height:"auto", maxWidth:"100%"}} alt="twitch about panel" />
                         <br></br>
                     </Col>
                     
-                    <Col xs={12} lg={4} className="d-flex justify-content-center mx-3">
+                    <Col xs={12} lg={4} className="justify-content-center mx-3">
                         {/* <a class="twitter-timeline" href="https://twitter.com/twitterDev?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by twitterDev</a>  */}
 
                         <TwitterTimelineEmbed

@@ -34,7 +34,7 @@ function Navigation() {
     
     window.addEventListener('scroll', toggleVisible);
     return(
-        <Navbar className="p-0 m-0 justify-content-center" fixed="top" >
+        <Navbar className="p-0 m-0 justify-content-center" >
           <Row style={{width: '100%'}}>
             <Col xs={12} className='text-center'>
               <img src={BobeNeonBlue} style={{height:"auto", maxWidth:"100%"}} />

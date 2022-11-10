@@ -14,11 +14,13 @@ function App() {
     backgroundImage: `url(${BobeBackground})`,
     height: "100vh",
     width: "100vw",
-    backgroundAttachment: "fixed"
+    backgroundAttachment: "fixed",
+    overflowX: "hidden",
+    overflowY: "scroll"
   }
 
   return (
-    <div className="App overflow-auto" style={sectionStyle}>
+    <div className="App " style={sectionStyle}>
         <Navigation />
         <Routes >
           
